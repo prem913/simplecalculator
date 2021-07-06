@@ -60,6 +60,9 @@ buttons.forEach(item => {
 });
 window.addEventListener('keypress', (e) => {
     let k = e.key;
+    if(e.keyCode===32){
+        return;
+    }
     if ((k <= 9 && k >= 0) || k === '+' || k === '=' || k === '-' || k === 'C' || k === '*' || k === '/' || k === 'Enter' || k === 'Delete') {
         if (k === 'Delete') {
             dele();
